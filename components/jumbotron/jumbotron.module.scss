@@ -3,18 +3,9 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1100px;
-  flex-direction: row; 
   margin: auto;
   width: 100%;
-
-  @media (max-width: 1000px) {
-    flex-direction: column;
-  }
-
-  &--reversed {
-    @extend .jumbotronWrapper;
-    flex-direction: row-reverse;
-  }
+  flex-direction: column;
 }
 
 .jumbotronContainer {
@@ -66,4 +57,17 @@
   padding: 50px 5%;
   color: white;
   overflow: hidden;
+
+  @media (min-width: 1000px) {
+    &:nth-child(even) {
+      & > section {
+        flex-direction: row-reverse;
+      }
+    }
+    &:nth-child(odd) {
+      & > section {
+        flex-direction: row;
+      }
+    }
+  }
 }
