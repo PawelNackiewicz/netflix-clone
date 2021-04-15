@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Footer from '../components/footer/Footer'
+import FaqContainer from '../containers/FaqContainer'
 import JumbtornContainer from '../containers/Jumbotorn'
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
 
       <JumbtornContainer />
+      <FaqContainer />
       <Footer />
     </div>
   )
